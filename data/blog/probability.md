@@ -48,23 +48,23 @@ Rules:
     1. `P(A) >= 0` Probability of any event must be non-negative
     2. `P(Ω) = 1` The probability of any outcome occuring must be equal to 1
     3. σ-additivity aka countable additivity. If A1, A2, ... is a countable sequence of events and disjoint, then `P(U) = ΣP(Ai)`
-    - counterexample: `P = Unif(0,1)`, then P({x}) = 0 for x ∈ [0,1]. If `1 = P([0,1])`, then `Σ P({x}) = 0` Dive into this later
+    - counterexample: `P = Unif(0,1)`, then P(\{x\}) = 0 for x ∈ [0,1]. If `1 = P([0,1])`, then `Σ P(\{x\}) = 0` Dive into this later
 
 Examples of the Above Rules
 
 1. Flip a coin with bias P(Heads with probability p, Tails with probability 1-p).
 
-   - Ω = {H, T} The sample space is just heads and tables
-   - F = 2 ^ σ = {H, T, Ø, {H, T}} These are all subsets of σ
-   - P(H) = p, P(T) = 1-p, P(Ø) = 0, P({H, T}) = 1 Why are Ø and {H, T} here?
+   - Ω = \{H, T\} The sample space is just heads and tables
+   - F = 2 ^ σ = \{H, T, Ø, \{H, T\}\} These are all subsets of σ
+   - P(H) = p, P(T) = 1-p, P(Ø) = 0, P(\{H, T\}) = 1 Why are Ø and \{H, T\} here?
    - We then want to create an experiment of n "independent" flips. Is our vocabulary rich enough for this? no
-   - Ω = {H, T}^n, F = 2^Ω, P(f1, f2, ... , fn) = p^{number of flips fi = H} \* (1-p)^{number of flips fi = T}
+   - Ω = \{H, T\}^n, F = 2^Ω, P(f1, f2, ... , fn) = p^\{number of flips fi = H\} \* (1-p)^\{number of flips fi = T\}
    - There can be multiple answers for a probability space. It just needs to be rich enough to capture all the probabilities
 
 2. Ω now equals all possible configurations of atoms in the universe. How do we represent this?
-   - Let A = {set of configurations that lead to flip heads}
-   - Let B = {set of configurations that lead to flip tails}
-   - F = {Ø, A, B, Ω = {A U B}}
+   - Let A = \{set of configurations that lead to flip heads\}
+   - Let B = \{set of configurations that lead to flip tails\}
+   - F = \{Ø, A, B, Ω = \{A U B\}\}
    - P(A) = p, P(B) = 1-p, P(Ø) = 0, P(Ω) = 1
 
 Note: The probability space is usually implicitly described, except for HW 1.
@@ -91,7 +91,7 @@ P(A U B) = P(B) + P(A\\(A∩B)) Using axiom 3
 P(B) + P(A\\(A∩B)) = P(B) + P(A) - P(A ∩B) Using Axiom 3
 
 Ex: Ω = countable set
-F = 2 ^ Ω, each individual is an event {w} ∈ F, for all w ∈ Ω
+F = 2 ^ Ω, each individual is an event \{w\} ∈ F, for all w ∈ Ω
 P(A) = Σ for all A ⊆ Ω
 This is a discrete sample space.
 

@@ -112,12 +112,12 @@ We also need:
 - OSX uses a hash table rather than a tree for software translation data. This hash table is known as an inverted hash table
 
 ```
-inverted page table entry = {
+inverted page table entry = \{
   process or memory object ID,
   virtual page number,
   physical page frame number,
   access permissions
-}
+\}
 ```
 
 ## Efficient Address Translation
@@ -134,11 +134,11 @@ Thus, we can use a cache to improve performance. A cache stores certain data to 
 - **TLB:** A small hardware table that contains results of a recent address translation. Each entry maps a virtual page to a physical page.
 
 ```
-TLB entry = {
+TLB entry = \{
           virtual page number,
           physical page frame number,
           access permissions
-            }
+            \}
 ```
 
 - On a lookup, the TLB hardware checks all of the entries against the virtual page. If there is a match, the TLB returns the physical address. (TLB hit) If none of the entries match, the hardware does the full address translation and is added to the TLB, usually replacing the least recently used entry.
@@ -161,12 +161,12 @@ TLB entry = {
 We need to get rid of the TLB's copies of the old process' page translations and permission. We can flush the TLB(discard all contents), or flush the tagged TLB, where entries contain the process ID that produced each translation.
 
 ```
-tagged TLB entry = {
+tagged TLB entry = \{
   process ID,
   virtual page number,
   physical page frame number,
   access permissions
-}
+\}
 ```
 
 2. **Permission Reduction:** When the OS modifies an entry in a page table, the special purpose hardware keeps the cached data consistent. Software is needed so a single modification can affect multiple TLB entries and the OS ensures the TLB does not contain an incorrect mapping.

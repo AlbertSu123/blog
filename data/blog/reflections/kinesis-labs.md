@@ -2,7 +2,7 @@
 title: Kinesis Labs
 date: '2021-04-20'
 tags: ['crypto', 'infra']
-draft: true
+draft: false
 summary: 'A short dive into cosmos'
 ---
 

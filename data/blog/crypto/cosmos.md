@@ -44,7 +44,7 @@ Most blockchains have:
 
 Quick notes
 
-- Bc of the blockchain trilemma{decentralization, scalability, security}, applications will use multiple blockchains to achieve the trilemma
+- Bc of the blockchain trilemm \{decentralization, scalability, security\}, applications will use multiple blockchains to achieve the trilemma
 - To communicate between blockchains
 
 1. Deploy contract on Ethereum: meant to communicate with validators
