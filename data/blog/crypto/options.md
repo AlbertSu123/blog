@@ -23,7 +23,7 @@ Recall cumulative density function (Probability that random variable is less tha
 E[e^(itX)] - corresponds to the fourier transform, which is a good way to model things
 
 Can express characteristic function as sum of the moments? E[X^n] term ~ price of a power future with power n.
-The price of a power perpetual implies something? <- not sure what it implies
+The price of a power perpetual implies something? not sure what it implies
 
 Sum of two random variables => product of characteristic functions
 ^ What's the use case here?

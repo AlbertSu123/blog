@@ -2,7 +2,7 @@
 title: Lessons from a UC Berkeley 4.0
 date: '2021-04-20'
 tags: ['crypto', 'infra']
-draft: true
+draft: false
 summary: 'Actually useful study tips'
 ---
 

@@ -48,7 +48,7 @@ Rules:
     1. `P(A) >= 0` Probability of any event must be non-negative
     2. `P(Ω) = 1` The probability of any outcome occuring must be equal to 1
     3. σ-additivity aka countable additivity. If A1, A2, ... is a countable sequence of events and disjoint, then `P(U) = ΣP(Ai)`
-    - counterexample: `P = Unif(0,1)`, then P({x}) = 0 for x ∈ [0,1]. If `1 = P([0,1])`, then `Σ P({x}) = 0` <- Dive into this later
+    - counterexample: `P = Unif(0,1)`, then P({x}) = 0 for x ∈ [0,1]. If `1 = P([0,1])`, then `Σ P({x}) = 0` Dive into this later
 
 Examples of the Above Rules
 
@@ -79,7 +79,7 @@ Ex: If `A ∈ F`, `P(A^C) = 1 - P(A)`. The probability of A's complement is 1 - 
   - 1 = P(Ω) Using axiom 2
   - P(A U A^C) = P(A) + P(A^C) Using Axiom 3
 
-Ex: If A and B are events and A is a subset of B, then `P(A) <= P(B)`
+Ex: If A and B are events and A is a subset of B, then `P(A) = P(B)`
 B = A U (B \ A). B is equal to the disjoint union of A and B minus the elements of A
 P(B) = P(A U (B \ A)) => P(A) + P(B\A) Using axiom 3
 P(A) + P(B\A) >= P(A) Using axiom 1
