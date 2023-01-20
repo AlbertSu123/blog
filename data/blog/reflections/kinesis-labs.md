@@ -3,7 +3,7 @@ title: Kinesis Labs
 date: '2021-04-20'
 tags: ['crypto', 'infra']
 draft: false
-summary: 'A short dive into cosmos'
+summary: 'Problems encountered when running Kinesis Labs'
 ---
 
 This one really sucks. It was a series of unfortunate mistakes that led to a multinational company repeatedly issuing DMCA takedown notices on our website.

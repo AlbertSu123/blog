@@ -21,6 +21,7 @@ summary: 'Musings on interpersonal interactions'
 - When complementing people, always compliment them on something they have earned, not something they have.
 - When you’re leading a conversation, it’s very good to invite other people who might be more quiet by asking them what they think or joking with them.
 - Fully commit to friendly gestures, such as high fives, back pats, shoulder touches. Fully committing matters as it shows more confidence but also helps with being more trustworthy.
+- A killer question I like to ask founders: “who in your space do you think is doing fraud right now?” And then I go fund that company instead
 
 # Not Useful stuff
 
@@ -40,11 +41,13 @@ summary: 'Musings on interpersonal interactions'
   - Furthermore, I found that this method keeps me much more interested, which is a more correlated with success and retention, and so I became much more productive, and was able to still keep up my other extra curricular commitments. YMMV.
 
 - **On meaning: One always finds one's burden again.**
+
   - Camus uses Sisyphus as a metaphor to describe our absurd existence. Like Sisyphus, we are in a constant cycle of striving for purpose and discovering that it is all devoid of meaning. In Sisyphus' case, the gods condemned him to this task with the idea that all his efforts will be futile, the punishment being that he puts forward a monumental effort for nothing. However, it is not up to the gods to determine what gives Sisyphus purpose. Sisyphus can find meaning in this task if he so chooses, and by finding meaning in this task, he revolts against the gods who want him to suffer. Likewise, we are faced with the Absurd; a universe seemingly without objective meaning. By responding to this with our own subjective meaning, we revolt against the Absurd.
   - "The struggle towards the heights is enough to fill a man's heart. One must imagine Sisyphus happy."
   - I don't know if I necessarily believe that Sisyphus has to be HAPPY to defy the gods and find purpose, but I think the idea Camus is trying to convey is that nothing/nobody gets to decide what your purpose is. And even though the universe is without meaning, that doesn't mean that we have to live meaningless lives.
   - The way I interpret the quote in the picture is: at the beginning of every day, we are all too aware of the burdens we will face, and the struggle we are about to undergo. No matter what, we will always strive for something bigger than ourselves. As we accomplish one thing, another goal replaces it, and we are constantly struggling to be complete. By recognizing how difficult life is, and how we are always incomplete in some sense, we can live in rebellion to the negative feelings that keep us from moving forward. We voluntarily take on the burden of life, knowing that burden will never fully be lifted. Why? Camus sees that struggle as purpose. And whatever reason you subjectively have
   - _"I leave Sisyphus at the foot of the mountain. One always finds one's burden again."_
+
 - **Toxicity in Computer Science:**
   - A lot of people get into software because the computer understands them. The computer doesn't make faces that you don't understand or behave in ways that are unpredictable. So you spend more time with the computer than people. The software doesn't make fun of you or talk about you behind your back.
   - Then as you grow older and enter college you meet hundreds of other people just like you. And now all of the social deficiencies that you had in high school are celebrated as eccentricities. So you are pushed even further away from people and into the world of software. And in this world the only thing that matters is your grade on the assignment. Nobody grades you how well you are liked personally by your peers.
@@ -65,6 +68,7 @@ summary: 'Musings on interpersonal interactions'
 - U2f security key for in person use ie yubikey for houses
 - Delivery drivers in doordash need to wait to drop off package. Use public key private key cryptography to let them open a box to drop package in
 - Dao owning football/sports team
+- Csgo gambling for NFTs, you deposit nfts for floor price and the pot is drawn every 10 mins. Need to have cool pics and a chat. Need to have free way to enter so its sweepstakes
 
 # Completion Time: 1 month
 

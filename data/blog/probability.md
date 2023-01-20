@@ -6,18 +6,20 @@ draft: false
 summary: 'Notes from EECS 126. Work in progress'
 ---
 
-# Probability in Electrical Engineering and Computer Science
+# Lecture 1: Probability space, Three Axioms of Probability
 
-Real applications of probability
+## TLDR:
+
+Probability space function: (Ω set , F events, P probability measure)
+Axioms:
+
+1. P(A) >= 0
+2. P(Ω) = 1
+3. If A1, ..., An are disjoint events => P(UA) = Σ (A)
+   Real applications of probability
 
 Introduction to Probability, 2nd Edition
 Follows the course, can borrow from engineering library
-
-TODO:
-Set calendar for homework self grades and resubmission time
-Set midterm time on calendar
-Choose discussion time
-Countable vs uncountable
 
 ## Probability: Math + a way of thinking about uncertainty
 
@@ -104,3 +106,106 @@ The goal of probability is to take complicated things and use that to approximat
 Mathematicians: Given a probability space(model), what can I say about outcomes of experiments that derive from this model?
 Statistician: Given outcomes, how do I choose a good model(probability space)?
 Engineers: Given a real world problem, how do I choose a model that captures the essence of the model and then use the model to draw insight.
+
+TODO:
+Set calendar for homework self grades and resubmission time
+Set midterm time on calendar
+Choose discussion time
+Countable vs uncountable
+
+# Lecture 2: Conditional Probability, Independence, Random Variables
+
+**Conditional Probability:** If `B ∈ F` and `P(B) > 0`, then conditional probability P(A|B) = P(A ∩ B) / P(B)
+
+_Intuition_: Probability A occurs given we know that B occurred
+
+Formal Definition: P(.|B) gives a restriction of our model (Ω, F, P) to those samples in B
+If `(B, F|B, P(.|B))` is a probability space itself, where `F|B = {A ∩ B: A ∈ F}`
+
+_Ex._ If A1, A2, ... ∈ F, P(Ai) > 0, A partion Ω
+`P(B) = Σ P(B ∩ Ai) = Σ P(B|Ai) * P(Ai)`
+
+## Bayes Rule
+
+Sometimes, it's easy to express P(B|A), but we are really interested in P(A|B)
+Let A be the state of the experiment, B be the observation data
+
+P(A|B) - given the observation, we want the state. This is the task of inference.
+
+Suppose we forgot Bayes Rule, let's try to recreate it from definition of conditional probability
+`P(A|B) = P(B ∩ A) / P(B) = P(A) * P(B|A) / P(B)`
+
+_Ex._ Suppose we have the following model: 85% of students got a pass, 15% of students got a no pass. 60% students that got passes went to lecture, 40% of students did not go to lecture. 10% of students that got no passes went to lecture, 90% didn't go to lecture.
+
+We want P(NP | N) / P(NP | Y). How much more likely are you to NP when you don't attend lecture vs when you do attend lecture?
+P(NP ∩ N) / P(NP ∩ Y) \* P(Y) / P(N)
+
+_Ex._ Suppose we roll two dice and the sum is 10. What is the probability roll 1 was = 4?
+
+```
+B = {Sum of rolls = 10}
+A = {first roll is 4}
+
+P(A|B) = P(A ∩ B) / P(B)
+       = P({First roll is 4, sum of rolls is 10}) / P({sum of rolls is 10})
+       = P({first: 4, second: 6}) / P({(4,6), (5,5), (6,4)})
+       = (1/36) / (3/36)
+       = 1/3
+```
+
+### Conditioning also allows us to usefully decompose intersections of events.
+
+_Ex._ Consider event A1 ... An
+P(∩ A) = P(A<sub>1</sub> | ∩<sup>n</sup><sub>i = 2</sub> A<sub>i</sub>) P (∩ A<sub>i</sub>)
+
+_Ex._ Given n people in a room, what is the probability that more than 2 people share a birthday?
+
+A<sub>i</sub> = {person i does not share a birthday with any of the people j = 1, ..., i-1}
+
+P(A<sub>i</sub> | ∩ <sup>i-1</sup><sub>j=1</sub> A<sub>j</sub>) = (365 - (i-1)) / 365
+
+This is because the person needs to land in one of the days not in the 365.
+P(no shared birthdays) = P(∩ A<sub>i</sub>)
+
+Use 1-x <= e^-x.
+Approximate using taylor series
+
+Let n = 23 - there are 23 kids in a class.
+P(shared birthday) >= 1 - e^((i-1)/365))
+
+## Independence
+
+Events A, B are independent if P(A ∩ B) = P(A) * P(B)
+Disjoint events are not independent
+*Note:\* in a special case where P(A) > 0: A,B: dependent <=> P(B|A) = P(B)
+
+In general, collection A<sub>1</sub>, A<sub>2</sub>, ... ∈ F are independent events if P(∩<sub>i ∈ S</sub> A<sub>i</sub>) = ∏ <sub>i ∈ S</sub> P(A<sub>i</sub>) for all finite sets of indices S
+
+If A<sub>1</sub>, A<sub>2</sub>, ... ∈ F are independent, then B<sub>1</sub>, B<sub>2</sub>, ... are independent, where each A<sub>i</sub> = B<sub>i</sub> or B<sub>i</sub><sup>C</sup>
+Intuitively, we assume that knowing A means we know A's complement
+
+∩<sub>i=2</sub><sup>n</sup> A<sub>i</sub>
+∏P(Ai) = P(∩ Ai) = P(∩) + P(A1)
+(1- P(Ai)) ∏ P(Ai) = P(A1^C ∩ ∏<sub>i=2</sub>Ai)
+This shows A<sub>1</sub><sup>C</sup>, A<sub>2</sub>, ... , A<sub>n</sub> are independent
+Therefore, B<sub>1</sub>, B<sub>2</sub>, ... , B<sub>n</sub> are independent
+
+### Conditional Independence
+
+Often times we have two events that we think of as independent but aren't. There might be a confounding variable C
+If A,B,C are such that P(C) > 0 and P(A∩B|C) = P(A|C) P(B|C), then A,B are said to be conditionally independent given C
+
+Consider two coins with bias p!=q
+Pick a coin at random, and flip twice. H(i) = Event that flip i is heads
+Are the two coinflips independent? No. If p is 1 and q is 0, then we know what the next coin flip is given our first coin flip.
+
+P(H<sub>i</sub>) = p + q / 2
+P(H<sub>1</sub> ∩ H<sub>2</sub>) = p<sup>2</sup> + q<sup>2</sup> / 2 != P(H<sub>1</sub>) P(H<sub>2</sub>) = (p+q)<sup>2</sup> / 2
+C = {pick coin p} H<sub>1</sub>, H<sub>2</sub> conditionally independent given C
+
+TODO:
+Set calendar for homework self grades and resubmission time
+Set midterm time on calendar
+Choose discussion time
+Countable vs uncountable
+Go to discussion
