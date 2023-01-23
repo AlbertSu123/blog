@@ -53,10 +53,10 @@ The swap function is very simple, just two lines:
         whenNotPaused
         deadlineCheck(deadline)
         returns (uint256)
-    {
+    \{
         updateSwapFee(minDy);
         return swapStorage.swap(tokenIndexFrom, tokenIndexTo, dx, minDy);
-    }
+    \}
 ```
 
 There were only three functions that could have held this error, the `deadlineCheck()` modifier, the `updateSwapFee()` function, or the `swapStorage.swap()` function.
@@ -136,10 +136,10 @@ Finally, we would set rewards per second on the current SimpleRewarder Contracts
 -
 
 ```
-function setRewardPerSecond(uint256 _rewardPerSecond) public onlyOwner {
+function setRewardPerSecond(uint256 _rewardPerSecond) public onlyOwner \{
         rewardPerSecond = _rewardPerSecond;
         emit LogRewardPerSecond(_rewardPerSecond);
-    }
+    \}
 ```
 
 in SimpleRewarder.sol with `_rewardPerSecond` set to 0.

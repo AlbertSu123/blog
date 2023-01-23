@@ -120,7 +120,7 @@ Countable vs uncountable
 _Intuition_: Probability A occurs given we know that B occurred
 
 Formal Definition: P(.|B) gives a restriction of our model (Ω, F, P) to those samples in B
-If `(B, F|B, P(.|B))` is a probability space itself, where `F|B = {A ∩ B: A ∈ F}`
+If `(B, F|B, P(.|B))` is a probability space itself, where `F|B = \{A ∩ B: A ∈ F\}`
 
 _Ex._ If A1, A2, ... ∈ F, P(Ai) > 0, A partion Ω
 `P(B) = Σ P(B ∩ Ai) = Σ P(B|Ai) * P(Ai)`
@@ -143,8 +143,8 @@ P(NP ∩ N) / P(NP ∩ Y) \* P(Y) / P(N)
 _Ex._ Suppose we roll two dice and the sum is 10. What is the probability roll 1 was = 4?
 
 ```
-B = {Sum of rolls = 10}
-A = {first roll is 4}
+B = \{Sum of rolls = 10\}
+A = \{first roll is 4\}
 
 P(A|B) = P(A ∩ B) / P(B)
        = P({First roll is 4, sum of rolls is 10}) / P({sum of rolls is 10})
@@ -160,7 +160,7 @@ P(∩ A) = P(A<sub>1</sub> | ∩<sup>n</sup><sub>i = 2</sub> A<sub>i</sub>) P (�
 
 _Ex._ Given n people in a room, what is the probability that more than 2 people share a birthday?
 
-A<sub>i</sub> = {person i does not share a birthday with any of the people j = 1, ..., i-1}
+A<sub>i</sub> = \{person i does not share a birthday with any of the people j = 1, ..., i-1\}
 
 P(A<sub>i</sub> | ∩ <sup>i-1</sup><sub>j=1</sub> A<sub>j</sub>) = (365 - (i-1)) / 365
 
@@ -201,7 +201,7 @@ Are the two coinflips independent? No. If p is 1 and q is 0, then we know what t
 
 P(H<sub>i</sub>) = p + q / 2
 P(H<sub>1</sub> ∩ H<sub>2</sub>) = p<sup>2</sup> + q<sup>2</sup> / 2 != P(H<sub>1</sub>) P(H<sub>2</sub>) = (p+q)<sup>2</sup> / 2
-C = {pick coin p} H<sub>1</sub>, H<sub>2</sub> conditionally independent given C
+C = \{pick coin p\} H<sub>1</sub>, H<sub>2</sub> conditionally independent given C
 
 TODO:
 Set calendar for homework self grades and resubmission time
