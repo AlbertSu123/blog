@@ -159,16 +159,3 @@ Kinesis is a decentralized automated market maker (AMM) on the EVMOS blockchain,
 Kinesis enables efficient, swift, and low-slippage swaps for traders and high-yield for liquidity providers. We believe in collaboration with other Cosmos projects, in maximizing the interoperability of Kinesis, and in building out the stablecoin ecosystem for Cosmos.
 
 Kinesis has no governance token, no admin fees, and no value extraction mechanism. We are building this project as members of the Evmos ecosystem as a public good.
-
-{
-"title": "Liquidity Mining Proposal for Axelar, Celer Network, and Gravity Bridge on Kinesis",
-"description": "Link to Proposal: ",
-"recipient": "evmos1mx9nqk5agvlsvt2yc8259nwztmxq7zjq50mxkp",
-"amount": [
-{
-"denom": "aevmos",
-"amount": "99000000000000000000000"
-}
-],
-"deposit": "64000000000000000000aevmos"
-}

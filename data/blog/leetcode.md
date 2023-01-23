@@ -1,3 +1,7 @@
+# Array
+
+TLDR: put everything into a map, then solve
+
 ## [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
 
 Easy - use a map
@@ -30,3 +34,13 @@ Easy, but requires a bit of coding and thinking through how to iterate through 3
 ## [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
 
 Easy, just make sure to think about how can I iterate through less stuff(use a set), and make sure to iterate through the less stuff.
+
+# Two Pointer
+
+## [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
+
+Easy, but need to be more careful with what variables I'm using. TLDR: need to do leetcode when I'm more awake
+
+## [Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
+
+This is just binary search but not really, since we are only going one element at a time.

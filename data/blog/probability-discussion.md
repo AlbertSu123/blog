@@ -74,7 +74,7 @@ Pr(ω) = pretty hard to calculate
 
 What are the tradeoffs? Formulation 1 has more information, Formulation 1 also has which ball goes to which bin, also Pr(ω) is much harder to calculate
 
-### Compute the probability of the event {all empty bins sit to the left of all the bins containing at least one ball} in terms of P(A<sub>i</sub>)
+### Compute the probability of the event \{all empty bins sit to the left of all the bins containing at least one ball\} in terms of P(A<sub>i</sub>)
 
 b is the event of interest, but we need to write its probability in terms of A<sub>i</sub>
 
